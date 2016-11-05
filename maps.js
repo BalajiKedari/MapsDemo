@@ -62,7 +62,7 @@ function initMap() {
   }, {
     lat: 16.503413946435582,
     lng: 80.74092864990234
-  } {
+  } ,{
     lat: 16.51460570242487,
     lng: 80.72256088256836,
   }, {
@@ -78,7 +78,7 @@ function initMap() {
     fillColor: '#FF0000',
     fillOpacity: 0.35
   });
-  vijayawada2.setMap(map);
+  vijayawada3.setMap(map);
 
 
 
