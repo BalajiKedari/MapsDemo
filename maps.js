@@ -1,6 +1,7 @@
 // This example creates a simple polygon representing the Bermuda Triangle.
 
 function initMap() {
+  var vij = {lat: 16.494946, lng:80.688971}
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 7,
     center: {
@@ -9,6 +10,45 @@ function initMap() {
     },
     mapTypeId: 'terrain'
   });
+
+var contentString='<div id="content">'+
+	'<div id="siteNotice">'+
+	'</div>'+
+	'<h1 id="firstHeading" class="firstHeading">Vijayawada</h1>'+
+	'<div id="bodyContent">'+ '<div style="float:left; width:20%;"><img src="vja-main.jpg" width="120" height="80"/></div>' +
+	'<div style="float:right; width:80%;margin-top: -19px;"><p>The <b>Vijayawada</b> is the capital of Andrapadesh state. <br/>' +
+	'The original complex with 2 million square feet of office space is the company\'s second largest square footage '+
+	'assemblage of Google buildings (The largest Google building is the 2.9 million square foot building in New York City '+
+	'which Google bought in 2010) '+
+	// '<p>Attribution: Googleplex, <a href="http://en.wikipedia.org/wiki/Googleplex">'+
+	// 'http://en.wikipedia.org/wiki/Googleplex</a> '+
+	'.</p>'+'</div>'+
+	'</div>'+
+	'</div>';
+ 
+// var contentString = '<div id="content">'+
+           
+//              '<h1 id="firstHeading" class="firstHeading">vijayawada</h1>'+
+//       //       '<table id="t1">'+
+//       //  '<tr>'+hiii+'</tr>'+
+//       //       '</table>'+
+
+// '</div>';
+
+        var infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+
+        var marker = new google.maps.Marker({
+          position: vij,
+          map: map,
+          title: 'Vijayawada'
+        });
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
+      
+
 
   // Define the LatLng coordinates for the polygon's path.
   var vij1Coords = [{
@@ -70,38 +110,36 @@ function initMap() {
     lng: 80.7081413269043
   }];
   
-  var vijayawada3 = new google.maps.Polygon({
-    paths: vij3Coords,
-    strokeColor: '#FF0000',
-    strokeOpacity: 0.8,
-    strokeWeight: 2,
-    fillColor: '#FF0000',
-    fillOpacity: 0.35
-  });
-  vijayawada3.setMap(map);
-
-
-
-
+  
 
   // Construct the polygon.
   var vijayawada1 = new google.maps.Polygon({
     paths: vij1Coords,
-    strokeColor: '#FF0000',
+    strokeColor: '#491027',
     strokeOpacity: 0.8,
     strokeWeight: 2,
-    fillColor: '#FF0000',
+    fillColor: '#491027',
     fillOpacity: 0.35
   });
   vijayawada1.setMap(map);
+
   var vijayawada2 = new google.maps.Polygon({
     paths: vij2Coords,
-    strokeColor: '#FF0000',
+    strokeColor: '#331E1E',
     strokeOpacity: 0.8,
     strokeWeight: 2,
-    fillColor: '#FF0000',
+    fillColor: '#331E1E',
     fillOpacity: 0.35
   });
   vijayawada2.setMap(map);
 
+var vijayawada3 = new google.maps.Polygon({
+    paths: vij3Coords,
+    strokeColor: '#f43782',
+    strokeOpacity: 0.8,
+    strokeWeight: 2,
+    fillColor: '#f43782',
+    fillOpacity: 0.35
+  });
+  vijayawada3.setMap(map);
 }
