@@ -1,64 +1,16 @@
 <html>
-    <head>
-    
-        <style>
-            #map {
-  height: 500px;
-              }
-.divtable{
-    width:200px;
-    height:30px;
-    border:1px solid black;
-}
-.col1{
-    float:left;
-    width:95px;
-    border-right:1px solid black;
-     height:30px;
-     line-height:30px;
-     text-align:center;
 
-}
-.col2{
-    float:left;
-    width:95px;
-     height:30px;
-     line-height:30px;
-      text-align:center;
-    
-}
-.col1head{
-     float:left;
-    width:95px;
-    border-right:1px solid black;
-     height:30px;
-     line-height:30px;
-     text-align:center;
-     font-weight:bold;
+<head>
+	<!--<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.16.6/lodash.min.js"> </script>
 
-}
-.col2head{
-  float:left;
-    width:95px;
-     height:30px;
-     line-height:30px;
-      text-align:center;
-       font-weight:bold;
+</head>
 
-}
-.divtablehead{
-     width:200px;
-    height:30px;
-    border:1px solid black;
-    border-bottom:none;
-}
-      </style>
- </head>
+<body>
+	<div id="map"></div>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDiHhkA6FDtUtZ1cyh07YlC2ewVCpi9Fhs&callback=initMap" async
+		defer></script>
 
-    <body>
-<div id="map"></div>
-<script src="maps.js"></script>
-       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDiHhkA6FDtUtZ1cyh07YlC2ewVCpi9Fhs&callback=initMap" async defer></script>
+</body>
 
-        </body>
-    </html>
+</html>

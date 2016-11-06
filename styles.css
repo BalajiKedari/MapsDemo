@@ -1,0 +1,53 @@
+
+		#map {
+			height: 500px;
+		}
+		
+		.divtable {
+			width: 200px;
+			height: 30px;
+			border: 1px solid black;
+		}
+		
+		.col1 {
+			float: left;
+			width: 95px;
+			border-right: 1px solid black;
+			height: 30px;
+			line-height: 30px;
+			text-align: center;
+		}
+		
+		.col2 {
+			float: left;
+			width: 95px;
+			height: 30px;
+			line-height: 30px;
+			text-align: center;
+		}
+		
+		.col1head {
+			float: left;
+			width: 95px;
+			border-right: 1px solid black;
+			height: 30px;
+			line-height: 30px;
+			text-align: center;
+			font-weight: bold;
+		}
+		
+		.col2head {
+			float: left;
+			width: 95px;
+			height: 30px;
+			line-height: 30px;
+			text-align: center;
+			font-weight: bold;
+		}
+		
+		.divtablehead {
+			width: 200px;
+			height: 30px;
+			border: 1px solid black;
+			border-bottom: none;
+		}
