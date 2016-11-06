@@ -2,6 +2,9 @@
 
 function initMap() {
   var vij = {lat: 16.494946, lng:80.688971}
+  var vij2={lat: 16.508603, lng:80.688971}
+  var vij3={lat: 16.503275, lng:80.644390}
+ 
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 7,
     center: {
@@ -10,22 +13,24 @@ function initMap() {
     },
     mapTypeId: 'terrain'
   });
+//console.log(map);
+var contentString1='<div id="content">'+
+ '<div class="divtablehead"><div class="col1head">Place</div><div class="col2head">KMs</div></div>'+
+     '<div class="divtable"><div class="col1">Machilipatnam</div><div class="col2">64</div></div>'+
+      '</div>'+
+	'</div>';
 
-var contentString='<div id="content">'+
-	'<div id="siteNotice">'+
-	'</div>'+
-	'<h1 id="firstHeading" class="firstHeading">Vijayawada</h1>'+
-	'<div id="bodyContent">'+ '<div style="float:left; width:20%;"><img src="vja-main.jpg" width="120" height="80"/></div>' +
-	'<div style="float:right; width:80%;margin-top: -19px;"><p>The <b>Vijayawada</b> is the capital of Andrapadesh state. <br/>' +
-	'The original complex with 2 million square feet of office space is the company\'s second largest square footage '+
-	'assemblage of Google buildings (The largest Google building is the 2.9 million square foot building in New York City '+
-	'which Google bought in 2010) '+
-	// '<p>Attribution: Googleplex, <a href="http://en.wikipedia.org/wiki/Googleplex">'+
-	// 'http://en.wikipedia.org/wiki/Googleplex</a> '+
-	'.</p>'+'</div>'+
-	'</div>'+
+  var contentString2='<div id="content">'+
+ '<div class="divtablehead"><div class="col1head">Place</div><div class="col2head">KMs</div></div>'+
+     '<div class="divtable"><div class="col1">Airport</div><div class="col2">6</div></div>'+
+      '</div>'+
 	'</div>';
  
+ var contentString3='<div id="content">'+
+ '<div class="divtablehead"><div class="col1head">Place</div><div class="col2head">KMs</div></div>'+
+     '<div class="divtable"><div class="col1">PvSCollege</div><div class="col2">20</div></div>'+
+      '</div>'+
+	'</div>';
 // var contentString = '<div id="content">'+
            
 //              '<h1 id="firstHeading" class="firstHeading">vijayawada</h1>'+
@@ -35,19 +40,45 @@ var contentString='<div id="content">'+
 
 // '</div>';
 
-        var infowindow = new google.maps.InfoWindow({
-          content: contentString
+        var infowindow1 = new google.maps.InfoWindow({
+          content: contentString1
         });
 
-        var marker = new google.maps.Marker({
+        var marker1 = new google.maps.Marker({
           position: vij,
           map: map,
           title: 'Vijayawada'
         });
-        marker.addListener('click', function() {
-          infowindow.open(map, marker);
+        marker1.addListener('click', function() {
+          infowindow1.open(map, marker1);
         });
       
+ var infowindow2 = new google.maps.InfoWindow({
+          content: contentString2
+        });
+
+        var marker2 = new google.maps.Marker({
+          position: vij2,
+          map: map,
+          title: 'Vijayawada'
+        });
+        marker2.addListener('click', function() {
+          infowindow2.open(map, marker2);
+        });
+
+var infowindow3 = new google.maps.InfoWindow({
+          content: contentString3
+        });
+
+        var marker3 = new google.maps.Marker({
+          position: vij3,
+          map: map,
+          title: 'Vijayawada'
+        });
+        marker3.addListener('click', function() {
+          infowindow3.open(map, marker3);
+        });
+
 
 
   // Define the LatLng coordinates for the polygon's path.
@@ -143,3 +174,17 @@ var vijayawada3 = new google.maps.Polygon({
   });
   vijayawada3.setMap(map);
 }
+
+// '<div id="siteNotice">'+
+// 	'</div>'+
+// 	'<h1 id="firstHeading" class="firstHeading">Vijayawada</h1>'+
+// 	'<div id="bodyContent">'+ '<div style="float:left; width:20%;"><img src="vja-main.jpg" width="120" height="80"/></div>' +
+// 	'<div style="float:right; width:80%;margin-top: -19px;"><p>The <b>Vijayawada</b> is the capital of Andrapadesh state. <br/>' +
+// 	'The original complex with 2 million square feet of office space is the company\'s second largest square footage '+
+// 	'assemblage of Google buildings (The largest Google building is the 2.9 million square foot building in New York City '+
+// 	'which Google bought in 2010) '+
+// 	// '<p>Attribution: Googleplex, <a href="http://en.wikipedia.org/wiki/Googleplex">'+
+// 	// 'http://en.wikipedia.org/wiki/Googleplex</a> '+
+// 	'.</p>'+'</div>'+
+// 	'</div>'+
+
